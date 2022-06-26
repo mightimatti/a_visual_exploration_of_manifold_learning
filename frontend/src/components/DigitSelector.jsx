@@ -20,7 +20,7 @@ const digitOption = [
 const algorithmOptions = [
   { value: 'pca', label: 'Principal Component Analysis' },
   { value: 'lle', label: 'Locally Linear Embedding' },
-  // { value: 'mds', label: 'Multi-dimensional Scaling' },
+  { value: 'mds', label: 'Multi-dimensional Scaling' },
   { value: 'isomap', label: 'Isomap Embedding' },
   // { value: 'tsne', label: 'T-distributed Stochastic Neighbour Embedding' },
 ]
