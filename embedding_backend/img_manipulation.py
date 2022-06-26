@@ -9,8 +9,7 @@ import time
 import seaborn as sns
 
 IMG_FOLDER = (
-    "/home/bean/Desktop/UNI/visual_analytics/visual_analytics_project"
-    + "/vis_ana/embedding_backend/aggregated_images"
+    "aggregated_images"
 )
 
 
