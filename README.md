@@ -7,7 +7,7 @@ This repository contains the results of my work on final project of the Sapienza
 ## Installation
 ### React
 - `cd frontend` 
-- `npm install`
+- `npm install package.json --legacy-peer-deps` (this is required as `react-vis` is sadly deprecated, yet compatible with React 17)
 - `npm run start`
 
 ### Python
