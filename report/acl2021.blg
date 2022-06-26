@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: acl2021.aux
+The style file: acl_natbib.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: acl2021.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty booktitle in cosmo_limp_2020
+Warning--missing publisher in cosmo_limp_2020
+You've used 7 entries,
+            3571 wiz_defined-function locations,
+            748 strings with 7199 characters,
+and the built_in function-call counts, 5332 in all, are:
+= -- 472
+> -- 246
+< -- 4
++ -- 78
+- -- 69
+* -- 379
+:= -- 806
+add.period$ -- 30
+call.type$ -- 7
+change.case$ -- 62
+chr.to.int$ -- 7
+cite$ -- 9
+duplicate$ -- 347
+empty$ -- 373
+format.name$ -- 92
+if$ -- 1160
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 68
+newline$ -- 41
+num.names$ -- 28
+pop$ -- 141
+preamble$ -- 1
+purify$ -- 51
+quote$ -- 0
+skip$ -- 253
+stack$ -- 0
+substring$ -- 215
+swap$ -- 196
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 63
+warning$ -- 2
+while$ -- 31
+width$ -- 0
+write$ -- 96
+(There were 2 warnings)

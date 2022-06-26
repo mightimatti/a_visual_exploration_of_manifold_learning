@@ -31,3 +31,5 @@ embedding_backend/dset.pkl
 .env.production.local
 .idea/*
 
+*.aux
+*.log
