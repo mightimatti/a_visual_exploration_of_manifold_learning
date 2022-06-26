@@ -10,6 +10,8 @@ from PIL import Image
 import numpy as np
 import pickle
 
+CACHED_DS_FILEPATH = "dset.pkl"
+
 
 # utility function
 def rgb_to_hex(float_r, float_g, float_b):
