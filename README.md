@@ -16,3 +16,5 @@ This repository contains the results of my work on final project of the Sapienza
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
 - `python server.py`
+
+Both applications need to be running at the same time for the prototype to function properly 
