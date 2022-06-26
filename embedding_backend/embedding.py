@@ -11,9 +11,9 @@ import numpy as np
 import pickle
 
 
-#utility function
+# utility function
 def rgb_to_hex(float_r, float_g, float_b):
-    return '#%02x%02x%02x' % (
+    return "#%02x%02x%02x" % (
         int(float_r * 255),
         int(float_g * 255),
         int(float_b * 255),
@@ -23,13 +23,27 @@ def rgb_to_hex(float_r, float_g, float_b):
 class EmbeddingGenerator:
     def __init__(self):
 
-        with open("dset.pkl", "rb") as f:
-            mnist = pickle.load(f)
-        # mnist = fetch_openml('mnist_784')
-        self.training_object_count = 3000
+        try:
+            with open(CACHED_DS_FILEPATH, "rb") as f:
+                self.x, self.y = pickle.load(f)
+            print("Using cached dataset")
+        except FileNotFoundError as err:
+            print(
+                "Didn't find cached dataset. Downloading it now. This might take a minute…"
+            )
 
-        self.x = mnist.data
-        self.y = mnist.target
+            # download dataset using sklearns built-in method
+            self.x, self.y = fetch_openml("mnist_784", return_X_y=True, as_frame=True)
+
+            # pickle dataset to speed up future runs
+            with open(CACHED_DS_FILEPATH, "wb+") as f:
+                pickle.dump(
+                    (
+                        self.x,
+                        self.y,
+                    ),
+                    f,
+                )
 
         self.normalized_x = normalize(self.x)
         self.index = self.x.index
@@ -117,7 +131,7 @@ class EmbeddingGenerator:
             "max_x": max(max_x),
             "max_y": max(max_y),
         }
-        response_data['color_mapping'] = {
+        response_data["color_mapping"] = {
             idx: rgb_to_hex(*c) for idx, c in enumerate(sns.husl_palette(n_colors=10))
         }
 
