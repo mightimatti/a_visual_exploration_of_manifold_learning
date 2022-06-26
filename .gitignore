@@ -10,6 +10,8 @@ embedding_backend/aggregated_images/*
 
 frontend/npm-debug.log*
 frontend/yarn-debug.log*
+frontend/package-lock.json
+frontend/yarn.lock
 frontend/yarn-error.log*
 /.pnp
 .pnp.js
