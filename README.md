@@ -11,7 +11,7 @@ This repository contains the results of my work on final project of the Sapienza
 - `npm run start`
 
 ### Python
-- `cd backend` 
+- `cd embedding_backend` 
 - `python3 -m venv venv`
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
