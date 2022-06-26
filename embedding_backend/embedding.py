@@ -50,6 +50,8 @@ class EmbeddingGenerator:
         self.normalized_x = normalize(self.x)
         self.index = self.x.index
         self.return_object_count = 1000
+        self.training_object_count = 3000
+
 
     def get_model(self, method):
         default_kwargs = {"n_components": 2}
