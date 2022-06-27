@@ -124,6 +124,21 @@
       \caption{A picture of the proposed mockup vs.  screenshot from the prototype of the application}
     \end{figure}
 
+    \subsection{Usage}
+      When navigating to the page of the prototype the user immediately sees the user interface which can roughly be separated into 5 parts. In the following I will briefly address their function:
+      \subsubsection*{Search field}
+        The page's header contains a field allowing the user to select the classes of digits they desire the backend to sample from, before calculating and returnin a 2-dimensional embedding. Leaving the field empty will result in all 10 digit classes being included. A drop-down field allows the user to select the dimensionality reduction technique they wish to employ. 
+      \subsubsection*{The Chart}
+        This section contains main chart, displaying colour-coded dots representative of all instances embedded in the calculation. 
+        The dots in the chart can be selected, either by clicking on them individually, \textit{dragging} a rectangular selection over a region of the graph(similar to selecting multiple files in a OS's file explorer) or by clicking the legend. Hovering a point displays the instance it represents, right-clicking it will remove it from the selection if is currently selected. 
+        The scale of the axes is automatically set based on the output of the calculation and the classes are colour-coded. To the right there is a (small) legend containing all digits displayed and their color. Hovering an entry in the legend hightlights only all instances of the class it represents. Clicking on an item adds all instances in that class to the current selection.
+      \subsubsection*{The Aggregation Selection}
+        To the right of the chart visualization there is a column that allows the user how they wish to aggregate the selected instances. Aggregation techniques in the prototype are currently limited to various types of average images(calculated over the user's current selction of instances). They are:\begin{itemize}
+            \item \textbf{Average Image(Monochrome)} All images are added and the mean is calculated for every single pixel value. This can emphasize certain similarities in the input but, has a tendency to blur the results
+            \item \textbf{Average Image(Colour, Saturating)} Mean images are calculated for per class(as above). These are then converted to colour(the colour is coordinated with the colour their class is represented by in the chart) and the resulting average images are additively overlayed. As this method tends to 'blow out'/saturate high activity areas in the image, it becomes different to interpret for large might induce false colours.
+            \item \textbf{Average Image(Colour, normalized)} Similar to above, mean images are calculated for every class. In the aggregation step any class's mean image is converted to HSL, it's luminance is scaled to be proportionate to the current class's relative representation in the user's selection, i.e. the ratio between images pertinent to that class and the total count of images in the selection. This approach avoids saturarating the aggregated image, but results in visually 'dim' results(particularily  for the darker coloured classes, see fig \label{aggregation_techniques})   
+        \end{itemize} 
+
   \section {Insights}
     \label{insights}
 
